@@ -61,7 +61,7 @@
   237  cd /etc/zabbix/zabbix_server.conf
   238  cd /etc/zabbix/
   239  ll
-  240  nano zabbix_server.conf 
+  240  nano zabbix_server.conf # поменял ip адрес сервера на адрес ВМ
   241  sudo nano zabbix_server.conf 
   242  systemctl restart zabbix-server zabbix-agent apache2
   243  systemctl enable zabbix-server zabbix-agent apache2
