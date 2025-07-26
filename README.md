@@ -39,8 +39,37 @@
 
 #### Требования к результатам 
 1. Прикрепите в файл README.md скриншот авторизации в админке.
-2. Приложите в файл README.md текст использованных команд в GitHub.
+<img width="1640" height="929" alt="image" src="https://github.com/user-attachments/assets/5835a024-ed0e-40a9-a8f4-fe400a9792f0" />
 
+3. Приложите в файл README.md текст использованных команд в GitHub.
+```
+  222  sudo -s 
+  223  sudo systemctl status postgresql
+  224  sudo ept update
+  225  sudo apt update
+  226  sudo apt install postgresql
+  227  sudo systemctl status postgresql
+  228  wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_6.0+ubuntu24.04_all.deb
+  229  dpkg -i zabbix-release_latest_6.0+ubuntu24.04_all.deb
+  230  sudo dpkg -i zabbix-release_latest_6.0+ubuntu24.04_all.deb
+  231  apt update 
+  232  sudo apt update 
+  233  sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+  234  sudo -u postgres createuser --pwprompt zabbix
+  235  sudo -u postgres createdb -O zabbix zabbix
+  236  zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+  237  cd /etc/zabbix/zabbix_server.conf
+  238  cd /etc/zabbix/
+  239  ll
+  240  nano zabbix_server.conf 
+  241  sudo nano zabbix_server.conf 
+  242  systemctl restart zabbix-server zabbix-agent apache2
+  243  systemctl enable zabbix-server zabbix-agent apache2
+  244  systemctl status zabbix-server.service
+  249  systemctl status zabbix-server.service
+
+
+```
 ---
 
 ### Задание 2 
