@@ -89,34 +89,63 @@
 3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
 4. Приложите в файл README.md текст использованных команд в GitHub
 
----
+скриншот раздела Configuration > Hosts
+<img width="1645" height="947" alt="image" src="https://github.com/user-attachments/assets/75223975-ca05-48db-b16a-2f5432bb8a18" />
 
+скриншот лога zabbix agent
+<img width="1547" height="923" alt="image" src="https://github.com/user-attachments/assets/7dc1777e-353f-4653-97e1-e5fd76a9ef95" />
 
----
+скриншот раздела Monitoring > Latest data
+<img width="1659" height="944" alt="image" src="https://github.com/user-attachments/assets/45bece29-8af2-48ee-a4bd-7b3ff8217c92" />
 
-### Задание 1
-
-`Приведите ответ в свободной форме........`
-
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+текст использованных команд в GitHub
 
 ```
-Поле для вставки кода...
-....
-....
-....
-....
+447  wget https://repo.zabbix.com/zabbix/6.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_6.0+ubuntu24.04_all.deb
+  448  dpkg -i zabbix-release_latest_6.0+ubuntu24.04_all.deb
+  449  cd /etc/apt
+  450  ll
+  451  cat sources.list
+  452  nano sources.list
+  453  cat sources.list.d
+  454  cd sources.list.d
+  455  ll
+  456  cd
+  457  apt update
+  458  apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+  459  dpkg -i zabbix-release_latest_6.0+ubuntu24.04_all.deb
+  460  apt update
+  461  apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+  462  sudo -u postgres createuser --pwprompt zabbix
+  463  sudo -u postgres createdb -O zabbix zabbix
+  464  zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+  465  nano /etc/zabbix/zabbix_server.conf
+  466  systemctl restart zabbix-server zabbix-agent apache2
+  467  systemctl enable zabbix-server zabbix-agent apache2
+  468  exit
+  469  wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_6.0+ubuntu24.04_all.deb
+  470  dpkg -i zabbix-release_latest_6.0+ubuntu24.04_all.deb
+  471  apt update
+  472  apt install zabbix-server-pgsql zabbix-frontend-php php8.3-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+  473  sudo -u postgres createuser --pwprompt zabbix
+  474  sudo -u postgres createdb -O zabbix zabbix
+  475  cd /etc/zabbix/zabbix_server.conf
+  476  cd /etc/zabbix/
+  477  nano zabbix_server.conf
+  478  systemctl restart zabbix-server zabbix-agent apache2
+  479  systemctl enable zabbix-server zabbix-agent apache2
+  480  ip a
+  481  sudo ip link set enp0s3 down
+  482  ip addr add 10.0.2.17/24 dev enp0s3
+  483  sudo ip link set enp0s3 up
+  484  ip a
+  485  sudo ip link set enp0s3 down
+  486  ip addr add 10.0.2.17/24 dev enp0s3
+  487  sudo ip link set enp0s3 up
+  488  ip addr show
+  489  ping 10.0.2.15
+  490  ip addr show
+  491  cd /etc/network/interfaces
+  492  cd /etc/network/
+
 ```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
-
-
----
-
-### Задание 2
